@@ -13,8 +13,8 @@ metadata:
 spec:
   ports:
     - name: http
-      port: {{ .Values.dashboardDeployment.container.port }}
+      port: {{ .Values.dashboard.container.port }}
       protocol: TCP
-      targetPort: {{ .Values.dashboardDeployment.container.port }}
+      targetPort: {{ .Values.dashboard.container.port }}
   selector:
 {{ include "tektonDashboard.labelselector" . | indent 4 }}
